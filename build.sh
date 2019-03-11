@@ -38,7 +38,12 @@ cd $TRAVIS_BUILD_DIR/TS-Kata-Collections/ts-kata-util && raco pkg install --deps
 echo "**************************"
 echo "INSTALLING TS-Languages"
 echo "**************************"
-cd $TRAVIS_BUILD_DIR/TS-Languages && raco install-all-here
+cd $TRAVIS_BUILD_DIR/TS-Languages && raco install-all-here 
+
+echo "**************************"
+echo "TESTING TS-Languages"
+echo "**************************"
+cd $TRAVIS_BUILD_DIR/TS-Languages && raco test-all-here 
 
 echo "**************************"
 echo "INSTALLING TS-Kata-Collections"
