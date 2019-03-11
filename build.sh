@@ -1,3 +1,6 @@
+#Exit if commands fail.  Fail fast!
+set -e
+
 echo "**************************"
 echo "INSTALLING RACKET CHIPMUNK"
 echo "**************************"
