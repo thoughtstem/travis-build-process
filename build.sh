@@ -15,8 +15,8 @@ echo "**************************"
 echo "INSTALLING GAME-ENGINE-*"
 echo "**************************"
 raco pkg install --deps search-auto https://github.com/thoughtstem/game-engine.git#$TRAVIS_BRANCH
-raco pkg install --deps search-auto https://github.com/thoughtstem/game-engine-demos.git?path=game-engine-demos-common#$TRAVIS_BRANCH
 raco pkg install --deps search-auto https://github.com/thoughtstem/game-engine-rpg.git#$TRAVIS_BRANCH
+raco pkg install --deps search-auto https://github.com/thoughtstem/game-engine-demos.git?path=game-engine-demos-common#$TRAVIS_BRANCH
 
 echo "**************************"
 echo "cd $TRAVIS_BUILD_DIR"
