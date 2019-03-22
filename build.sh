@@ -14,6 +14,8 @@ raco pkg install --deps search-auto https://github.com/thoughtstem/ratchet.git#$
 echo "**************************"
 echo "INSTALLING GAME-ENGINE-*"
 echo "**************************"
+sudo apt-get update
+sudo apt-get install libportaudio2
 raco pkg install --deps search-auto https://github.com/thoughtstem/game-engine.git#$TRAVIS_BRANCH
 raco pkg install --deps search-auto https://github.com/thoughtstem/game-engine-rpg.git#$TRAVIS_BRANCH
 raco pkg install --deps search-auto https://github.com/thoughtstem/game-engine-demos.git?path=game-engine-demos-common#$TRAVIS_BRANCH
