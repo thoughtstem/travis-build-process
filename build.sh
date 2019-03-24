@@ -50,7 +50,7 @@ raco setup --no-docs --fail-fast ts-kata-util
 echo "**************************"
 echo "INSTALLING TS-Languages"
 echo "**************************"
-cd $TRAVIS_BUILD_DIR/TS-Languages && raco install-all-here 
+cd $TRAVIS_BUILD_DIR/TS-Languages && raco install-all-here --no-docs
 
 echo "**************************"
 echo "TESTING TS-Languages"
