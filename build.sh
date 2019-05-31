@@ -15,18 +15,6 @@ raco setup --no-docs --fail-fast ratchet
 
 
 echo "**************************"
-echo "INSTALLING GAME-ENGINE-*"
-echo "**************************"
-sudo apt-get update
-sudo apt-get install libportaudio2
-raco pkg install --deps search-auto --no-setup https://github.com/thoughtstem/game-engine.git#$TRAVIS_BRANCH
-raco setup --no-docs --fail-fast game-engine
-raco pkg install --deps search-auto --no-setup https://github.com/thoughtstem/game-engine-rpg.git#$TRAVIS_BRANCH
-raco setup --no-docs --fail-fast game-engine-rpg
-raco pkg install --deps search-auto --no-setup https://github.com/thoughtstem/game-engine-demos.git?path=game-engine-demos-common#$TRAVIS_BRANCH
-raco setup --no-docs --fail-fast game-engine-demos-common
-
-echo "**************************"
 echo "cd $TRAVIS_BUILD_DIR"
 echo "**************************"
 cd $TRAVIS_BUILD_DIR
@@ -46,6 +34,18 @@ echo "INSTALLING ts-kata-util"
 echo "**************************"
 cd $TRAVIS_BUILD_DIR/TS-Kata-Collections/ts-kata-util && raco pkg install --deps search-auto --no-setup   
 raco setup --no-docs --fail-fast ts-kata-util
+
+echo "**************************"
+echo "INSTALLING GAME-ENGINE-*"
+echo "**************************"
+sudo apt-get update
+sudo apt-get install libportaudio2
+raco pkg install --deps search-auto --no-setup https://github.com/thoughtstem/game-engine.git#$TRAVIS_BRANCH
+raco setup --no-docs --fail-fast game-engine
+raco pkg install --deps search-auto --no-setup https://github.com/thoughtstem/game-engine-rpg.git#$TRAVIS_BRANCH
+raco setup --no-docs --fail-fast game-engine-rpg
+raco pkg install --deps search-auto --no-setup https://github.com/thoughtstem/game-engine-demos.git?path=game-engine-demos-common#$TRAVIS_BRANCH
+raco setup --no-docs --fail-fast game-engine-demos-common
 
 echo "**************************"
 echo "INSTALLING TS-Languages"
