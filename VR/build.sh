@@ -4,7 +4,7 @@ set -e
 echo "**************************"
 echo "CLONING and INSTALLING ts-kata-util"
 echo "**************************"
-git clone -b $TRAVIS_BRANCH https://github.com/thoughtstem/TS-Kata-Collections.git#$TRAVIS_BRANCH
+git clone -b $TRAVIS_BRANCH https://github.com/thoughtstem/TS-Kata-Collections.git
 cd $TRAVIS_BUILD_DIR/TS-Kata-Collections/ts-kata-util && raco pkg install --deps search-auto --no-setup
 raco setup --no-docs --fail-fast ts-kata-util
 
