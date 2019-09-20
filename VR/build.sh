@@ -2,11 +2,10 @@
 set -e
 
 echo "**************************"
-echo "CLONING and INSTALLING ts-kata-util"
+echo "INSTALLING ts-kata-util"
 echo "**************************"
-git clone -b $TRAVIS_BRANCH https://github.com/thoughtstem/TS-Kata-Collections.git
-cd $TRAVIS_BUILD_DIR/TS-Kata-Collections/ts-kata-util && raco pkg install --deps search-auto --no-setup
-raco setup --no-docs --fail-fast ts-kata-util
+raco pkg install --deps search-auto --no-setup https://github.com/thoughtstem/TS-Kata-Collections.git?path=ts-kata-util#$TRAVIS_BRANCH
+raco setup --no-docs --fail-fast vr-engine
 
 echo "**************************"
 echo "INSTALLING vr-engine"
@@ -34,12 +33,6 @@ echo "**************************"
 echo "CLONING TS-VR-Languages"
 echo "**************************"
 git clone -b $TRAVIS_BRANCH https://github.com/thoughtstem/TS-VR-Languages.git
-
-echo "**************************"
-echo "INSTALLING ts-kata-util"
-echo "**************************"
-cd $TRAVIS_BUILD_DIR/TS-Kata-Collections/ts-kata-util && raco pkg install --deps search-auto --no-setup   
-raco setup --no-docs --fail-fast ts-kata-util
 
 echo "**************************"
 echo "INSTALLING TS-VR-Languages"
