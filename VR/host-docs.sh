@@ -12,7 +12,13 @@ then
   echo "*****************************"
   echo "Moving over doc files"
   echo "*****************************"
-  rm -rf katas.thoughtstem.com/* && find $TRAVIS_BUILD_DIR/TS-Kata-Collections/* -name "doc" | xargs cp -r --parents -t ./katas.thoughtstem.com/ && mv ./katas.thoughtstem.com/$TRAVIS_BUILD_DIR/TS-Kata-Collections/* ./katas.thoughtstem.com/ && rm -r ./katas.thoughtstem.com/$TRAVIS_BUILD_DIR/TS-Kata-Collections && cp $TRAVIS_BUILD_DIR/TS-Kata-Collections/index.html ./katas.thoughtstem.com/ && cp $TRAVIS_BUILD_DIR/TS-Kata-Collections/unlisted.html ./katas.thoughtstem.com/
+  mkdir -p katas.thoughtstem.com/VR &&
+  rm -rf katas.thoughtstem.com/VR/* && 
+    find $TRAVIS_BUILD_DIR/TS-VR-Katas/* -name "doc" | xargs cp -r --parents -t ./katas.thoughtstem.com/VR/ &&
+    mv ./katas.thoughtstem.com/VR/$TRAVIS_BUILD_DIR/TS-VR-Katas/* ./katas.thoughtstem.com/VR/ && 
+    rm -r ./katas.thoughtstem.com/VR/$TRAVIS_BUILD_DIR/TS-VR-Katas && 
+    cp $TRAVIS_BUILD_DIR/TS-VR-Katas/index.html ./katas.thoughtstem.com/VR/ && 
+    cp $TRAVIS_BUILD_DIR/TS-VR-Katas/unlisted.html ./katas.thoughtstem.com/VR/
 
   echo "*****************************"
   echo "PUSHING it back to github"
