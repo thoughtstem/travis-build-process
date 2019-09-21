@@ -3,7 +3,7 @@ set -e
 
 if [ "$TRAVIS_BRANCH" = "master" ]
 then
-  if [ "$TRAVIS_REPO_SLUG" = "thoughtstem/TS-Kata-Collections" ]
+  if [ "$TRAVIS_REPO_SLUG" = "thoughtstem/TS-GE-Katas" ]
   then
     echo "*****************************"
     echo "Cloning katas.thoughtstem.com"
@@ -16,11 +16,11 @@ then
     echo "*****************************"
     mkdir -p katas.thoughtstem.com/GE &&
       rm -rf katas.thoughtstem.com/GE/* && 
-      find $TRAVIS_BUILD_DIR/TS-Kata-Collections/* -name "doc" | xargs cp -r --parents -t ./katas.thoughtstem.com/GE/ &&
-      mv ./katas.thoughtstem.com/GE/$TRAVIS_BUILD_DIR/TS-Kata-Collections/* ./katas.thoughtstem.com/GE/ && 
-      rm -r ./katas.thoughtstem.com/GE/$TRAVIS_BUILD_DIR/TS-Kata-Collections && 
-      cp $TRAVIS_BUILD_DIR/TS-Kata-Collections/index.html ./katas.thoughtstem.com/GE/ && 
-      cp $TRAVIS_BUILD_DIR/TS-Kata-Collections/unlisted.html ./katas.thoughtstem.com/GE/
+      find $TRAVIS_BUILD_DIR/TS-GE-Katas/* -name "doc" | xargs cp -r --parents -t ./katas.thoughtstem.com/GE/ &&
+      mv ./katas.thoughtstem.com/GE/$TRAVIS_BUILD_DIR/TS-GE-Katas/* ./katas.thoughtstem.com/GE/ && 
+      rm -r ./katas.thoughtstem.com/GE/$TRAVIS_BUILD_DIR/TS-GE-Katas && 
+      cp $TRAVIS_BUILD_DIR/TS-GE-Katas/index.html ./katas.thoughtstem.com/GE/ && 
+      cp $TRAVIS_BUILD_DIR/TS-GE-Katas/unlisted.html ./katas.thoughtstem.com/GE/
 
     echo "*****************************"
     echo "PUSHING it back to github"

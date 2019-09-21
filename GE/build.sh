@@ -20,9 +20,9 @@ echo "**************************"
 cd $TRAVIS_BUILD_DIR
 
 echo "**************************"
-echo "CLONING TS-Kata-Collections"
+echo "CLONING TS-GE-Katas"
 echo "**************************"
-git clone -b $TRAVIS_BRANCH https://github.com/thoughtstem/TS-Kata-Collections.git
+git clone -b $TRAVIS_BRANCH https://github.com/thoughtstem/TS-GE-Katas.git
 
 echo "**************************"
 echo "CLONING TS-Languages"
@@ -32,7 +32,7 @@ git clone -b $TRAVIS_BRANCH https://github.com/thoughtstem/TS-Languages.git
 echo "**************************"
 echo "INSTALLING ts-kata-util"
 echo "**************************"
-cd $TRAVIS_BUILD_DIR/TS-Kata-Collections/ts-kata-util && raco pkg install --deps search-auto --no-setup   
+cd $TRAVIS_BUILD_DIR/TS-GE-Katas/ts-kata-util && raco pkg install --deps search-auto --no-setup   
 raco setup --no-docs --fail-fast ts-kata-util
 
 echo "**************************"
@@ -58,7 +58,7 @@ echo "**************************"
 cd $TRAVIS_BUILD_DIR/TS-Languages && raco test-all-here 
 
 echo "**************************"
-echo "INSTALLING TS-Kata-Collections"
+echo "INSTALLING TS-GE-Katas"
 echo "**************************"
-cd $TRAVIS_BUILD_DIR/TS-Kata-Collections && raco install-all-here
+cd $TRAVIS_BUILD_DIR/TS-GE-Katas && raco install-all-here
 
