@@ -3,7 +3,7 @@ set -e
 
 if [ "$TRAVIS_BRANCH" = "master" ]
 then
-  if [ "$TRAVIS_REPO_SLUG" = "thoughtstem/TS-Kata-Collections"]
+  if [ "$TRAVIS_REPO_SLUG" = "thoughtstem/TS-Kata-Collections" ]
   then
     echo "*****************************"
     echo "Cloning katas.thoughtstem.com"
