@@ -42,6 +42,11 @@ raco pkg install --deps search-auto --no-setup https://github.com/thoughtstem/ga
 raco setup --no-docs --fail-fast game-engine-demos-common
 
 echo "**************************"
+echo "INSTALLING ts-kata-util"
+echo "**************************"
+raco pkg install --deps search-auto --no-setup https://github.com/thoughtstem/TS-GE-Katas.git?path=ts-kata-util#$TRAVIS_BRANCH
+
+echo "**************************"
 echo "INSTALLING TS-Languages"
 echo "**************************"
 cd $TRAVIS_BUILD_DIR/TS-Languages && raco install-all-here --no-docs
