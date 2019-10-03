@@ -49,14 +49,14 @@ raco setup --no-docs --fail-fast game-engine-demos-common
 
 
 echo "**************************"
-echo "INSTALLING TS-Languages"
+echo "INSTALLING TS-K2-Languages"
 echo "**************************"
-cd $TRAVIS_BUILD_DIR/TS-Languages && raco install-all-here --no-docs
+cd $TRAVIS_BUILD_DIR/TS-K2-Languages && raco install-all-here --no-docs
 
 echo "**************************"
-echo "TESTING TS-Languages"
+echo "TESTING TS-K2-Languages"
 echo "**************************"
-cd $TRAVIS_BUILD_DIR/TS-Languages && raco test-all-here 
+cd $TRAVIS_BUILD_DIR/TS-K2-Languages && raco test-all-here 
 
 echo "**************************"
 echo "INSTALLING TS-K2-Katas"
