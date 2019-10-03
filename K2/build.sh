@@ -45,7 +45,7 @@ echo "**************************"
 echo "INSTALLING ts-kata-util"
 echo "**************************"
 # It seems to be installed from something else...
-raco setup ts-kata-util
+raco setup --no-docs ts-kata-util
 
 echo "**************************"
 echo "INSTALLING TS-Languages"
