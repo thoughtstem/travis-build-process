@@ -2,6 +2,12 @@
 set -e
 
 echo "**************************"
+echo "INSTALLING ts-kata-util"
+echo "**************************"
+raco pkg install --deps search-auto --no-setup https://github.com/thoughtstem/TS-GE-Katas.git?path=ts-kata-util#$TRAVIS_BRANCH
+raco setup --no-docs --fail-fast ts-kata-util
+
+echo "**************************"
 echo "INSTALLING RACKET CHIPMUNK"
 echo "**************************"
 raco pkg install --deps search-auto --no-setup https://github.com/thoughtstem/racket-chipmunk.git#$TRAVIS_BRANCH
@@ -41,11 +47,6 @@ raco setup --no-docs --fail-fast game-engine-rpg
 raco pkg install --deps search-auto --no-setup https://github.com/thoughtstem/game-engine-demos.git?path=game-engine-demos-common#$TRAVIS_BRANCH
 raco setup --no-docs --fail-fast game-engine-demos-common
 
-echo "**************************"
-echo "INSTALLING ts-kata-util"
-echo "**************************"
-# It seems to be installed from something else...
-raco setup --no-docs ts-kata-util
 
 echo "**************************"
 echo "INSTALLING TS-Languages"
