@@ -2,6 +2,12 @@
 set -e
 
 echo "**************************"
+echo "INSTALLING ts-kata-util"
+echo "**************************"
+raco pkg install --deps search-auto --no-setup https://github.com/thoughtstem/TS-GE-Katas.git?path=ts-kata-util#$TRAVIS_BRANCH
+raco setup --no-docs --fail-fast ts-kata-util
+
+echo "**************************"
 echo "cd $TRAVIS_BUILD_DIR"
 echo "**************************"
 cd $TRAVIS_BUILD_DIR
