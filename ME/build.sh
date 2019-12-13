@@ -2,10 +2,10 @@
 set -e
 
 echo "**************************"
-echo "INSTALLING cutscene"
+echo "INSTALLING meta-engine"
 echo "**************************"
-raco pkg install --deps search-auto --no-setup https://github.com/thoughtstem/TS-ME-Languages.git?path=cutscene#$TRAVIS_BRANCH
-raco setup --no-docs --fail-fast cutscene
+raco pkg install --deps search-auto --no-setup https://github.com/thoughtstem/meta-engine.git?path=meta-engine#$TRAVIS_BRANCH
+raco setup --no-docs --fail-fast meta-engine
 
 echo "**************************"
 echo "cd $TRAVIS_BUILD_DIR"
