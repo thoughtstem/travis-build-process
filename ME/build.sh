@@ -5,7 +5,7 @@ echo "**************************"
 echo "INSTALLING cutscene"
 echo "**************************"
 raco pkg install --deps search-auto --no-setup https://github.com/thoughtstem/TS-ME-Languages.git?path=cutscene#$TRAVIS_BRANCH
-raco setup --no-docs --fail-fast fundamentals
+raco setup --no-docs --fail-fast cutscene
 
 echo "**************************"
 echo "cd $TRAVIS_BUILD_DIR"
